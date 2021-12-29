@@ -72,17 +72,18 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     // MARK: Pick the image from the album
     @IBAction func pickAnImageFromAlbum(_ sender: Any) {
-        let pickerController = UIImagePickerController()
-        pickerController.delegate = self // UIImagePickerControllerDelegate, UINavigationControllerDelegate
-        pickerController.sourceType = .photoLibrary // from album
-        present(pickerController, animated: true, completion: nil)
+        presentPickerViewController(source: .photoLibrary)
     }
     
     // MARK: Pick the image from the camera
     @IBAction func pickAnImageFromCamera(_ sender: Any) {
+        presentPickerViewController(source: .camera)
+    }
+    
+    func presentPickerViewController(source: UIImagePickerController.SourceType) {
         let pickerController = UIImagePickerController()
         pickerController.delegate = self // UIImagePickerControllerDelegate, UINavigationControllerDelegate
-        pickerController.sourceType = .camera // from camera
+        pickerController.sourceType = source // from album or camera
         present(pickerController, animated: true, completion: nil)
     }
     
@@ -120,7 +121,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     // MARK: Move the keyboard with the keyboard height using getKeyboardHeight function
     @objc func keyboardWillShow(_ notification: Notification) {
-        view.frame.origin.y -= getKeyboardHeight(notification)
+        if self.textField2.isFirstResponder {
+            view.frame.origin.y = -getKeyboardHeight(notification)
+        }
     }
     
     // MARK: Move the keyboard back
