@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6uS-D8-cXE" userLabel="Pick an Image">
-                                <rect key="frame" x="20" y="44" width="374" height="769"/>
+                                <rect key="frame" x="20" y="44" width="374" height="818"/>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z17-OL-c8z">
                                 <rect key="frame" x="0.0" y="813" width="414" height="49"/>
@@ -37,14 +37,14 @@
                                 </items>
                             </toolbar>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7rM-Hd-l93">
-                                <rect key="frame" x="20" y="110" width="374" height="44"/>
+                                <rect key="frame" x="20" y="84" width="374" height="44"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="30"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                             <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YNv-z3-FRA">
-                                <rect key="frame" x="20" y="703" width="374" height="44"/>
+                                <rect key="frame" x="20" y="729" width="374" height="44"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="30"/>
@@ -73,9 +73,9 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="G3V-5h-EqX" secondAttribute="trailing" constant="40" id="38s-2W-VOw"/>
                             <constraint firstItem="7rM-Hd-l93" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="3jG-bq-7aC"/>
                             <constraint firstItem="6uS-D8-cXE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="4ay-HO-6Ge"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6uS-D8-cXE" secondAttribute="bottom" id="4gW-A9-8xe"/>
                             <constraint firstItem="G3V-5h-EqX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="8rJ-ks-Xyp"/>
                             <constraint firstItem="G3V-5h-EqX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="RoE-hc-icP" secondAttribute="trailing" constant="8" symbolic="YES" id="9ha-xA-ih3"/>
-                            <constraint firstItem="z17-OL-c8z" firstAttribute="top" secondItem="6uS-D8-cXE" secondAttribute="bottom" id="Lrm-Eu-LXc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7rM-Hd-l93" secondAttribute="trailing" constant="20" id="MCC-dD-wGQ"/>
                             <constraint firstItem="z17-OL-c8z" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="NJq-CG-FxP"/>
                             <constraint firstItem="RoE-hc-icP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="NhL-LK-ACK"/>
@@ -84,8 +84,8 @@
                             <constraint firstItem="RoE-hc-icP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="48" id="VOj-sc-rLB"/>
                             <constraint firstItem="z17-OL-c8z" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="euh-mk-qGx"/>
                             <constraint firstItem="YNv-z3-FRA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="lZW-k9-pbA"/>
-                            <constraint firstItem="z17-OL-c8z" firstAttribute="top" secondItem="YNv-z3-FRA" secondAttribute="bottom" constant="66" id="nsq-BV-y3E"/>
-                            <constraint firstItem="7rM-Hd-l93" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="66" id="uBV-Cw-7xs"/>
+                            <constraint firstItem="z17-OL-c8z" firstAttribute="top" secondItem="YNv-z3-FRA" secondAttribute="bottom" constant="40" id="nsq-BV-y3E"/>
+                            <constraint firstItem="7rM-Hd-l93" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="uBV-Cw-7xs"/>
                             <constraint firstItem="6uS-D8-cXE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="vRe-EB-v6D"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6uS-D8-cXE" secondAttribute="trailing" constant="20" id="vbA-dD-EXa"/>
                         </constraints>
@@ -102,7 +102,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="115.84821428571428"/>
+            <point key="canvasLocation" x="503" y="-1081"/>
         </scene>
     </scenes>
     <resources>
