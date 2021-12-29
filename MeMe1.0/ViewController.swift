@@ -30,17 +30,19 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     // MARK: viewDidLoad fucntion
     override func viewDidLoad() {
         super.viewDidLoad()
-        // set the delegate of the textField (UITextFieldDelegate)
-        self.textField1.delegate = self
-        self.textField2.delegate = self
-        // set the textField text attributes
-        self.textField1.defaultTextAttributes = memeTextAttributes
-        self.textField2.defaultTextAttributes = memeTextAttributes
-        // set the text in the center after setting the text attributes
-        self.textField1.textAlignment = .center
-        self.textField2.textAlignment = .center
+        setupTextField(textField: self.textField1)
+        setupTextField(textField: self.textField2)
         // disable the share button
         self.shareButton.isEnabled = false
+    }
+    
+    func setupTextField(textField: UITextField) {
+        // set the delegate of the textField (UITextFieldDelegate)
+        textField.delegate = self
+        // set the textField text attributes
+        textField.defaultTextAttributes = memeTextAttributes
+        // set the text in the center after setting the text attributes
+        textField.textAlignment = .center
     }
     
     // MARK: viewWillAppear function
